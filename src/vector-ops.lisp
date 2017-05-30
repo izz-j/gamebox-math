@@ -32,10 +32,7 @@
 (defun* vec-stabilize! ((out-vec vec) (vec vec) &key ((tolerance single-float) +epsilon+))
     (:result vec :inline t :abbrev vstab!)
   (with-vectors ((o out-vec) (v vec))
-    (macrolet ((stabilize (place)
-                 `(if (< (abs ,place) tolerance)
-                      0.0
-                      ,place)))
+    (macrolet ((stabilize (place) `(if (< (abs ,place) tolerance) 0.0 ,place)))
       (psetf ox (stabilize vx)
              oy (stabilize vy)
              oz (stabilize vz))))
