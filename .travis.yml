@@ -31,5 +31,5 @@ cache:
 script:
   - ros -s prove -s cl-coveralls
         -e '(or (coveralls:with-coveralls (:exclude (list "t"))
-                  (prove:run :quri-test))
+                  (prove:run :gamebox-math.tests))
                 (uiop:quit -1))'
