@@ -55,9 +55,6 @@
   (is v2y 14.0 "with-vectors write second Y component")
   (is v2z 15.0 "with-vectors write second Z component"))
 
-(diag "vector pretty-printing")
-(is-print (prin1 (vec 1 2 3)) "#<1.0 2.0 3.0>" "pretty-printing")
-
 (diag "vector test")
 (is (gamebox-math::vtest) #(1 2 3) :test #'equalp "test-vector read components")
 (isnt (gamebox-math::vtest) #(0 0 0) :test #'equalp "test-vector read components")
