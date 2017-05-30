@@ -10,10 +10,10 @@
   :source-control (:git "git@github.com:mfiano/gamebox-math.git")
   :version "0.1.0"
   :encoding :utf-8
-  :long-description #.(uiop:read-file-string (uiop/pathname:subpathname *load-pathname* "README.md"))
+  :defsystem-depends-on (:prove-asdf)
   :depends-on (#:gamebox-math
                #:prove)
   :pathname "t"
   :serial t
   :components
-  ((:file "test-vector")))
+  ((:test-file "test-vector")))
