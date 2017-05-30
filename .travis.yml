@@ -29,7 +29,4 @@ cache:
     - $HOME/.config/common-lisp
 
 script:
-  - ros -s prove -s cl-coveralls
-        -e '(or (coveralls:with-coveralls (:exclude (list "t"))
-                  (prove:run :gamebox-math.tests))
-                (uiop:quit -1))'
+  - run-prove gamebox-math.tests.asd
