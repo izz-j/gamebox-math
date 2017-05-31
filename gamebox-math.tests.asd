@@ -11,4 +11,5 @@
   :pathname "t"
   :serial t
   :components
-  ((:test-file "vector")))
+  ((:file "package")
+   (:test-file "vector")))
