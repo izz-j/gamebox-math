@@ -18,6 +18,7 @@ env:
     - LISP=abcl
     - LISP=cmucl
     - LISP=alisp
+    - LIS=clasp
 
 install:
   - curl -L https://raw.githubusercontent.com/roswell/roswell/release/scripts/install-for-ci.sh | sh
