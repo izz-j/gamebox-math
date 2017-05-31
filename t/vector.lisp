@@ -174,7 +174,7 @@
 
 (diag "zero vector predicate")
 (ok (vzerop +zero-vector+))
-(ok (vzerop (vec 1 0 0)))
+(ok (vzerop (vec 0 0 0)))
 
 (diag "direction equality")
 (ok (vdir= (vec (random 1.0) 0 0) (vec (random 1.0) 0 0)))
